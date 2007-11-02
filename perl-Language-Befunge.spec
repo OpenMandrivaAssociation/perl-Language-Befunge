@@ -1,7 +1,7 @@
 %define realname   Language-Befunge
 
 Name:		perl-%{realname}
-Version:    2.08
+Version:    3.01
 Release:    %mkrel 1
 License:	GPL or Artistic
 Group:		Development/Perl
@@ -29,14 +29,16 @@ implementation (3D).
 make test
 
 %install
-rm -rf $RPM_BUILD_ROOT
+rm -rf %{buildroot}
 %makeinstall_std
 
 %clean
-rm -rf $RPM_BUILD_ROOT
+rm -rf %{buildroot}
 
 %files
 %defattr(-,root,root)
 %doc Changes README
-%{perl_vendorlib}/Language/
+%{_bindir}/jqbf98
+%{perl_vendorlib}/Language
+%{_mandir}/man1/jqbf98*
 %{_mandir}/man3/*
