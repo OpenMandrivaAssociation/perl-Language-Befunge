@@ -1,7 +1,7 @@
 %define realname   Language-Befunge
 
 Name:		perl-%{realname}
-Version:    3.01
+Version:    3.02
 Release:    %mkrel 1
 License:	GPL or Artistic
 Group:		Development/Perl
