@@ -10,7 +10,7 @@ Source0:    ftp://ftp.perl.org/pub/CPAN/modules/by-module/Language/Language-Befu
 Url:		http://search.cpan.org/dist/%{realname}
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildRequires:	perl-devel
-BuildRequires:  perl(aliased)
+BuildRequires:  perl-aliased
 BuildRequires:  perl(Class::Accessor::Fast)
 BuildRequires:	perl(Readonly)
 BuildRequires:  perl(Test::Exception)
