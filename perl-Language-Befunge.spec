@@ -1,8 +1,8 @@
 %define realname   Language-Befunge
 
 Name:		perl-%{realname}
-Version:    4.02
-Release:    %mkrel 3
+Version:    4.03
+Release:    %mkrel 1
 License:	GPL or Artistic
 Group:		Development/Perl
 Summary:    A generic funge interpreter
