@@ -1,22 +1,20 @@
-%define realname   Language-Befunge
+%define module   Language-Befunge
 
-Name:		perl-%{realname}
-Version:    4.04
+Name:		perl-%{module}
+Version:    4.06
 Release:    %mkrel 1
 License:	GPL or Artistic
 Group:		Development/Perl
 Summary:    A generic funge interpreter
-Source0:    ftp://ftp.perl.org/pub/CPAN/modules/by-module/Language/Language-Befunge-%{version}.tar.bz2
-Url:		http://search.cpan.org/dist/%{realname}
-BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
-BuildRequires:	perl-devel
+Url:		http://search.cpan.org/dist/%{module}
+Source:     http://www.cpan.org/modules/by-module/Language/%{module}-%{version}.tar.gz
 BuildRequires:  perl-aliased
 BuildRequires:  perl(Class::Accessor::Fast)
 BuildRequires:	perl(Readonly)
 BuildRequires:  perl(Test::Exception)
 BuildRequires:	perl(UNIVERSAL::require)
-
 BuildArch: noarch
+BuildRoot:	%{_tmppath}/%{name}-%{version}
 
 %description
 This module implements the Funge-98 specifications on a 2D field (also called 
@@ -43,7 +41,7 @@ rm -rf %{buildroot}
 %files
 %defattr(-,root,root)
 %doc Changes README
-%{_bindir}/jqbf98
+%{_bindir}/jqbef98
 %{perl_vendorlib}/Language
-%{_mandir}/man1/jqbf98*
+%{_mandir}/man1/jqbef98*
 %{_mandir}/man3/*
