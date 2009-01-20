@@ -10,6 +10,7 @@ Url:		http://search.cpan.org/dist/%{module}
 Source:     http://www.cpan.org/modules/by-module/Language/%{module}-%{version}.tar.gz
 BuildRequires:  perl-aliased
 BuildRequires:  perl(Class::Accessor::Fast)
+BuildRequires:  perl(Class::XSAccessor)
 BuildRequires:	perl(Readonly)
 BuildRequires:  perl(Test::Exception)
 BuildRequires:	perl(UNIVERSAL::require)
