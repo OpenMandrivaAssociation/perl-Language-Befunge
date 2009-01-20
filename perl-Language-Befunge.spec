@@ -1,7 +1,7 @@
 %define module   Language-Befunge
 
 Name:		perl-%{module}
-Version:    4.08
+Version:    4.09
 Release:    %mkrel 1
 License:	GPL or Artistic
 Group:		Development/Perl
