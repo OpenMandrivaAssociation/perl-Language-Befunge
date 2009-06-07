@@ -13,6 +13,7 @@ BuildRequires:  perl(Class::Accessor::Fast)
 BuildRequires:  perl(Class::XSAccessor)
 BuildRequires:	perl(Readonly)
 BuildRequires:  perl(Test::Exception)
+BuildRequires:  perl(Test::Output)
 BuildRequires:	perl(UNIVERSAL::require)
 BuildArch: noarch
 BuildRoot:	%{_tmppath}/%{name}-%{version}
