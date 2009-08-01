@@ -1,13 +1,16 @@
-%define module   Language-Befunge
+%define upstream_name    Language-Befunge
+%define upstream_version 4.12
 
-Name:		perl-%{module}
-Version:    4.12
+Name:       perl-%{upstream_name}
+Version:    %perl_convert_version %{upstream_version}
 Release:    %mkrel 1
-License:	GPL or Artistic
-Group:		Development/Perl
+
 Summary:    A generic funge interpreter
-Url:		http://search.cpan.org/dist/%{module}
-Source:     http://www.cpan.org/modules/by-module/Language/%{module}-%{version}.tar.gz
+License:	GPL+ or Artistic
+Group:		Development/Perl
+Url:		http://search.cpan.org/dist/%{upstream_name}
+Source0:    http://www.cpan.org/modules/by-module/Language/%{upstream_name}-%{upstream_version}.tar.gz
+
 BuildRequires:  perl-aliased
 BuildRequires:  perl(Class::Accessor::Fast)
 BuildRequires:  perl(Class::XSAccessor)
@@ -16,7 +19,7 @@ BuildRequires:  perl(Test::Exception)
 BuildRequires:  perl(Test::Output)
 BuildRequires:	perl(UNIVERSAL::require)
 BuildArch: noarch
-BuildRoot:	%{_tmppath}/%{name}-%{version}
+BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}
 
 %description
 This module implements the Funge-98 specifications on a 2D field (also called 
@@ -24,7 +27,7 @@ Befunge).  It can also work as a n-funge implementation (3D and more).
 
 
 %prep
-%setup -q -n Language-Befunge-%{version} 
+%setup -q -n Language-Befunge-%{upstream_version} 
 
 %build
 %{__perl} Makefile.PL -n INSTALLDIRS=vendor
