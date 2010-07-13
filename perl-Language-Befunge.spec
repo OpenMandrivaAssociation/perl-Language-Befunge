@@ -1,5 +1,5 @@
 %define upstream_name    Language-Befunge
-%define upstream_version 4.12
+%define upstream_version 4.13
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
